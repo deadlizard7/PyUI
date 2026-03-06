@@ -9,6 +9,9 @@ class Window:
         self.screen = pygame.display.set_mode(self.screenDims, pygame.RESIZABLE)
         pygame.display.set_caption(title)
         self.color = (0, 0, 0)
+        if customIconPath:
+            icon = pygame.image.load(customIconPath)
+            pygame.display.set_icon(icon)
         if colorRGB:
             self.color = colorRGB
         self.screen.fill(self.color)
